@@ -1,5 +1,5 @@
 import faker from 'faker'
 
-const cartText = `<div>You have ${faker.random.number()}</div>`
+const cartText = `<div>You have 10</div>`
 
-document.getElementById('cart').innerHTML = cartText
+document.querySelector('#cart-dev').innerHTML = cartText
