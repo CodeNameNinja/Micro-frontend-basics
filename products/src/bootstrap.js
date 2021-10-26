@@ -1,7 +1,5 @@
 import faker from 'faker';
 
-
-
 const mount = (el) => {
   //generate products
   let products = '';
@@ -16,5 +14,11 @@ const mount = (el) => {
   `;
   }
 
-  document.querySelector("#dev-products").innerHTML = products;
+  el.innerHTML = products;
 }
+
+if (process.env.NODE_ENV === 'development') {
+  mount(document.getElementById('dev-products'));
+}
+
+export { mount };
