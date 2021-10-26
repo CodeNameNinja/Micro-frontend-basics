@@ -18,7 +18,12 @@ const mount = (el) => {
 }
 
 if (process.env.NODE_ENV === 'development') {
-  mount(document.getElementById('dev-products'));
+  const el = document.querySelector('#dev-products');
+  // Assuming our container doesn't have an element with an id of 'dev-products'
+  if (el) {
+    // We are running in isolation
+    mount(el);
+  }
 }
 
 export { mount };
