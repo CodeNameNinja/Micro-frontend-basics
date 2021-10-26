@@ -1,2 +1,4 @@
+import { mount } from 'products/ProductsIndex';
 import 'cart/CartIndex';
-import 'products/ProductsIndex';
+
+mount(document.getElementById('my-products'));
